@@ -1,0 +1,124 @@
+.container-nav {
+	background: white;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 1rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-left {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.nav-left-logo img {
+	height: 40px;
+	cursor: pointer;
+}
+
+.nav-left-menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-left-menu-config {
+	position: relative;
+	cursor: pointer;
+	padding: 8px 16px;
+}
+
+.nav-left-menu-config span {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.nav-left-menu-config span::after {
+	content: '▼';
+	font-size: 0.8em;
+	margin-left: 4px;
+	transition: transform 0.2s ease;
+}
+
+.nav-left-menu-config:hover span::after {
+	transform: rotate(180deg);
+}
+
+.nav-left-submenus {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: white;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	min-width: 200px;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-10px);
+	transition: all 0.3s ease;
+	z-index: 1000;
+}
+
+.nav-left-submenus.show {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.nav-left-submenus li {
+	list-style: none;
+}
+
+.nav-left-submenus li a {
+	transition: background-color 0.2s ease;
+}
+
+.nav-left-submenus li a:hover {
+	background-color: #f5f5f5;
+}
+
+.nav-left-submenus li.active {
+	background: #e3f2fd;
+}
+
+.nav-sesion-info {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.user-profile {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.profile-icon {
+	font-size: 1.5rem;
+	color: #3498db;
+}
+
+.btn-sesion-info {
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	text-decoration: none;
+	color: white;
+	background: #3498db;
+}
+
+.btn-sesion-info.logout {
+	background: #e74c3c;
+}
+
+.btn-sesion-info:hover {
+	opacity: 0.9;
+}
+
+.menu-icon {
+	margin-right: 0.5rem;
+}
